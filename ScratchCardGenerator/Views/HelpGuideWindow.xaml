@@ -1,0 +1,313 @@
+﻿<Window x:Class="ScratchCardGenerator.Views.HelpGuideWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Scratch Card Generator - Technical Help Guide"
+        Width="1000" Height="800"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource PrimaryBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}">
+
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom" 
+                Content="_Close" 
+                IsDefault="True" 
+                Width="90" 
+                HorizontalAlignment="Right" 
+                Margin="10" 
+                Click="CloseButton_Click"/>
+
+        <FlowDocumentScrollViewer Padding="20" VerticalScrollBarVisibility="Auto">
+            <FlowDocument LineHeight="24" FontSize="14" FontFamily="Segoe UI">
+
+                <Paragraph FontSize="26" FontWeight="Bold" Margin="0,0,0,20" TextAlignment="Center">
+                    Scratch Card Generator Technical Guide
+                </Paragraph>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">1. Introduction &amp; Core Philosophy</Paragraph>
+                    <Paragraph>
+                        Welcome to the Scratch Card Generator. This guide is designed for all IT staff, both those familiar with the previous methods of game creation and those who are new to the process.
+                    </Paragraph>
+                    <Paragraph Margin="0,10,0,0">
+                        This application represents a fundamental paradigm shift. It replaces the previous manual workflow—which involved copying and directly modifying Visual Basic code across multiple programs for each job—with a modern, data-driven, and UI-based system.
+                    </Paragraph>
+                    <Paragraph Margin="0,10,0,0">
+                        The central philosophy is the
+                        <Bold>Project File (.scproj)</Bold> . This single file is the "source of truth" for an entire job, containing all settings, prize structures, symbol libraries, and card layouts in a clear, human-readable format. This approach provides several key advantages over the previous method:
+                    </Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">No More Code Editing:</Run> All game rules and parameters are now configured through the user interface. No programming knowledge is required to create or modify a game, eliminating the risk of syntax errors and logical bugs in code.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Data Integrity &amp; Safety:</Run> The built-in "Project Issues" validator constantly checks your configuration for logical errors, preventing many common setup mistakes before you even generate files.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Speed and Reusability:</Run> The new Project Template system allows you to save and reuse common layouts and settings, reducing the setup time for a new job from hours to minutes.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Auditability and Consistency:</Run> A single project file provides a complete, clear, and auditable record of a game's entire design, ensuring consistency across all generated files.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+                <BlockUIContainer>
+                    <Rectangle Height="1" Fill="{DynamicResource BorderBrush}" Margin="0,20"/>
+                </BlockUIContainer>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">2. A Detailed Walkthrough of the UI</Paragraph>
+                    <Paragraph>The interface is composed of three primary columns, each serving a distinct function in the workflow.</Paragraph>
+
+                    <Paragraph FontSize="16" FontWeight="Bold" Margin="0,15,0,5">2.1. The Left Panel: Project Configuration</Paragraph>
+                    <Paragraph>This panel contains all high-level settings for the entire job.</Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Job Settings:</Run> Defines the commercial and production parameters of the job. Fields like
+                                <Bold>Cards/Pack</Bold> ,
+                                <Bold>Live Packs</Bold> , and
+                                <Bold>No. Out</Bold> are used to calculate the total print run size and prize fund, which are reflected in the Game Analysis panel.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Is Poundland Game:</Run> A critical checkbox that enables a bespoke workflow. When ticked, standard barcode fields are hidden, and the file generation process will produce Poundland-specific barcode formats and redemption files, while suppressing other non-applicable reports.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Security Settings:</Run> Specifies the paths to the binary
+                                <Bold>.rnd</Bold> files containing pre-generated random numbers for security codes. The two schemes (6-digit vs. 3+7 digit) are mutually exclusive; providing a path for one will disable the controls for the other.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Game Analysis:</Run> A real-time dashboard displaying the financial and statistical breakdown of the game based on the current settings.
+                                <Bold>Live Run</Bold> refers to statistics for packs intended for public sale, while
+                                <Bold>Print Run</Bold> includes all packs to be printed, including extras for setup and waste.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Project Issues:</Run> A real-time validation panel that constantly analyses the project for logical errors. It provides immediate feedback on misconfigurations, preventing failed generation runs. You can use the checkbox to toggle the visibility of non-critical
+                                <Bold>Warnings</Bold> .
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+
+                    <Paragraph FontSize="16" FontWeight="Bold" Margin="0,15,0,5">2.2. The Central Panel: Data Management</Paragraph>
+                    <Paragraph>This panel uses tabs to manage the core data entities of the project.</Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Prize Tiers:</Run> Defines every possible outcome.
+                                <Bold>LvwWinnerCount</Bold> is the number of low-value prizes per pack.
+                                <Bold>HvwWinnerCount</Bold> is the total number of high-value prizes for the entire job.
+                                <Bold>Text Code</Bold> is a critical field used to link prizes to specific symbols in the "Match Symbol to Prize" game.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Symbols:</Run> The library of standard graphical symbols used in most games. Each symbol has a unique ID and display text.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Game Symbols:</Run> A separate library of numeric/textual symbols used exclusively by all "Match Symbol to Prize" games on the card.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+
+                    <Paragraph FontSize="16" FontWeight="Bold" Margin="0,15,0,5">2.3. The Right Panel: Card Design</Paragraph>
+                    <Paragraph>This panel is for the visual design and configuration of the playable area of the scratch card.</Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Game Module Palette:</Run> A list of available game types that can be added to the card.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Card Layout Designer:</Run> A visual canvas representing the scratch card. Drag modules from the palette to add them. Click to select, move, and use the handles to resize. Modules will snap to a grid and to each other's edges and sizes for precise alignment. Right-click for more options like re-ordering and removal.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">Module Properties:</Run> A context-sensitive panel that displays the configurable properties for the currently selected game module on the canvas.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+                <BlockUIContainer>
+                    <Rectangle Height="1" Fill="{DynamicResource BorderBrush}" Margin="0,20"/>
+                </BlockUIContainer>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">3. Quick Start: Your First Project</Paragraph>
+                    <Paragraph>This tutorial walks through creating a simple "Match 3 Symbols to Win £10" game.</Paragraph>
+                    <List MarkerStyle="Decimal" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Bold>Step 1: Configure Job Settings.</Bold> In the left panel, set
+                                <Italic>Job Name</Italic> to "My First Game",
+                                <Italic>Job Code</Italic> to "TEST001",
+                                <Italic>Cards Per Pack</Italic> to 60, and
+                                <Italic>No. of Common Packs</Italic> to 1.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Bold>Step 2: Define a Prize Tier.</Bold> In the central panel, go to the
+                                <Italic>Prize Tiers</Italic> tab. Click
+                                <Italic>Add Prize</Italic> . Edit the new row: set
+                                <Italic>Value</Italic> to 10.00,
+                                <Italic>Text Code</Italic> to "TEN", and
+                                <Italic>LvwWinnerCount</Italic> to 1. This configures one £10 prize per common pack.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Bold>Step 3: Design the Card Layout.</Bold> From the
+                                <Italic>Game Module Palette</Italic> on the right, drag the "Match Symbols in Grid" module onto the grey
+                                <Italic>Card Layout Designer</Italic> canvas.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Bold>Step 4: Check Properties and Validation.</Bold> Click the new module on the canvas. The
+                                <Italic>Module Properties</Italic> panel will appear. Confirm the settings are for a 3x3 grid to match 3 symbols. The
+                                <Italic>Project Issues</Italic> panel should be empty, confirming a valid configuration.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Bold>Step 5: Generate the Files.</Bold> In the main toolbar, click the generate buttons in order:
+                                <Bold>Generate LVW</Bold> ,
+                                <Bold>Generate HVW</Bold> , then
+                                <Bold>Generate Combined Files</Bold> . You will be prompted to save and select files along the way. Your final reports will be created in a "GMC" subfolder inside your main job directory.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+                <BlockUIContainer>
+                    <Rectangle Height="1" Fill="{DynamicResource BorderBrush}" Margin="0,20"/>
+                </BlockUIContainer>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">4. Advanced Features</Paragraph>
+
+                    <Paragraph FontSize="16" FontWeight="Bold" Margin="0,15,0,5">4.1. Project Templates</Paragraph>
+                    <Paragraph>
+                        To accelerate the setup of similar jobs, you can now save and load project templates. A template saves the entire card layout, all symbol libraries, and core settings like the client name, while resetting job-specific data (job numbers, prize winner counts, barcodes, security paths).
+                    </Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">To Save a Template:</Run> Configure a project as desired, then go to
+                                <Italic>File -> Save As Template...</Italic> . The project will be "sanitised" (job-specific data cleared) and saved as a
+                                <Bold>.sctemplate</Bold> file.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="SemiBold">To Start from a Template:</Run> Go to
+                                <Italic>File -> New from Template...</Italic> and select your saved file.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+                <BlockUIContainer>
+                    <Rectangle Height="1" Fill="{DynamicResource BorderBrush}" Margin="0,20"/>
+                </BlockUIContainer>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">5. Guide to Generated Files</Paragraph>
+                    <Paragraph>The "Generate Combined Files" step produces several important files in the "GMC" sub-directory. Understanding their purpose is key:</Paragraph>
+                    <List MarkerStyle="Disc" Margin="20,5,0,5">
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">*-lvw.json / *-hvw.json:</Run> Intermediate data files containing the generated low-value and high-value winner tickets before they are shuffled into the final print run.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">*-combined.json:</Run> The master data file containing every single ticket in its final, shuffled print order. This is a non-human-readable file for machine processing.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">*.csv (e.g., 356287-COP00305.csv):</Run> The main, human-readable report. It contains a detailed breakdown of the game data for every ticket in the print run.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">*Redemption Codes.csv / .txt:</Run> A critical file that contains the unique security code or barcode for every ticket, along with its prize value. This file is used by redemption and verification systems.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">*_LastBlock.csv:</Run> (Poundland Only) A special report containing a copy of the very last
+                                <Bold>pack</Bold> of tickets from the print run, often used for quality assurance.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">Game_Summary.csv:</Run> A high-level summary of the game's prize structure, total winners, odds, and financial payout percentages.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run FontWeight="Bold">data_manifest.sha256:</Run> A security file containing cryptographic checksums (digital fingerprints) of the key data files. This is used by the
+                                <Italic>Final Game Checker</Italic> application to prove that the data has not been altered or corrupted.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+                <BlockUIContainer>
+                    <Rectangle Height="1" Fill="{DynamicResource BorderBrush}" Margin="0,20"/>
+                </BlockUIContainer>
+
+                <Section>
+                    <Paragraph FontSize="20" FontWeight="SemiBold" Margin="0,10,0,10">6. FAQ &amp; Troubleshooting</Paragraph>
+                    <List Margin="10,5,0,5">
+                        <ListItem Margin="0,5,0,0">
+                            <Paragraph FontWeight="Bold">Q: Why are the barcode fields in Job Settings and the Prizes grid hidden?</Paragraph>
+                            <Paragraph>A: This happens when the "Is Poundland Game" checkbox is ticked. The Poundland workflow uses a special, automatically generated barcode for every ticket, so the standard barcode fields are hidden to prevent confusion.</Paragraph>
+                        </ListItem>
+                        <ListItem Margin="0,10,0,0">
+                            <Paragraph FontWeight="Bold">Q: I tried to generate files, but a warning appeared listing errors. What should I do?</Paragraph>
+                            <Paragraph>A: This is the pre-generation check. It has detected critical
+                                <Bold>Errors</Bold> in your project configuration. You should review the issues listed in the "Project Issues" panel and correct them. While the dialogue gives you the option to continue, it is highly recommended that you cancel and fix the errors first.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem Margin="0,10,0,0">
+                            <Paragraph FontWeight="Bold">Q: The application crashed. Is all my work lost?</Paragraph>
+                            <Paragraph>A: No. The application auto-saves your work every two minutes to a temporary recovery file. The next time you start the program, it will detect this file and ask if you want to restore your project.</Paragraph>
+                        </ListItem>
+                        <ListItem Margin="0,10,0,0">
+                            <Paragraph FontWeight="Bold">Q: Generation failed with a "could not generate a unique ticket" error.</Paragraph>
+                            <Paragraph>A: This error means the generator kept producing duplicate tickets, which usually happens in grid-based games when the number of available unique symbols is too low for the grid size. Try adding more symbols to the "Symbols" list or reducing the grid size.</Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </DockPanel>
+</Window>

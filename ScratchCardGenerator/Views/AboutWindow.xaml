@@ -1,0 +1,86 @@
+﻿<Window x:Class="ScratchCardGenerator.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="About Scratch Card Generator"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Background="{DynamicResource PrimaryBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}">
+
+    <!-- The main layout grid for the window -->
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Application Title -->
+        <TextBlock Grid.Row="0"
+                   Text="Scratch Card Generator"
+                   FontSize="22"
+                   FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+
+        <!-- Version and Copyright Information -->
+        <TextBlock Grid.Row="1"
+                   x:Name="VersionText"
+                   Text="{Binding AssemblyVersion, StringFormat='Version {0}'}"
+                   HorizontalAlignment="Center"
+                   Margin="0,5,0,0"/>
+
+        <TextBlock Grid.Row="2"
+                   Text="Copyright © 2025 Harlow Solutions."
+                   HorizontalAlignment="Center"/>
+
+        <!-- NEW: Application Description -->
+        <TextBlock Grid.Row="3"
+                   Text="A game design tool for designing, generating, and managing secure scratch card game data."
+                   HorizontalAlignment="Center"
+                   FontStyle="Italic"
+                   TextWrapping="Wrap"
+                   Margin="0,10,0,0"/>
+
+        <!-- NEW: Developer Information -->
+        <TextBlock Grid.Row="4"
+                   Text="Engineered by Chris Pringle."
+                   HorizontalAlignment="Center"
+                   Margin="0,5,0,15"/>
+
+        <!-- Separator Line -->
+        <Separator Grid.Row="5" Margin="0,0,0,15"/>
+
+        <!-- Acknowledgements for third-party libraries -->
+        <GroupBox Grid.Row="6"
+                  Header="Acknowledgements"
+                  Padding="10">
+            <StackPanel>
+                <TextBlock Text="This application utilises the following open-source libraries:"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="• QuestPDF (for PDF generation)" Margin="5,2"/>
+                <TextBlock Text="• QRCoder (for QR Code generation)" Margin="5,2"/>
+                <TextBlock Text="• BarcodeStandard (for barcode generation)" Margin="5,2"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- OK Button to close the window -->
+        <Button Grid.Row="7"
+                Content="_OK"
+                IsDefault="True"
+                Click="OkButton_Click"
+                Width="80"
+                HorizontalAlignment="Right"
+                Margin="0,15,0,0"/>
+    </Grid>
+</Window>

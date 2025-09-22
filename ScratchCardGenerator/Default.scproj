@@ -1,0 +1,481 @@
+{
+  "FilePath": "\\\\harlow.local\\DFS\\IT Department\\Applications\\Development 2025\\ScratchCardGenerator\\ScratchCardGenerator\\Resources\\Default.scproj",
+  "Settings": {
+    "Error": null,
+    "JobNo": "000000",
+    "SubJob": "",
+    "JobName": "Default Project",
+    "JobCode": "DEF00001",
+    "Client": "Default Client",
+    "ProductBarcode": "5000000000000",
+    "LoserBarcode": "5000000000001",
+    "GamesAware": false,
+    "NoArtWorks": 1,
+    "CardsPerPack": 60,
+    "NoOut": 0,
+    "TotalPacks": 1000,
+    "NoComPack": 0,
+    "EndDate": "2026-07-09T08:57:58.6443195+01:00",
+    "TicketSalePrice": 1.00,
+    "PrintPacks": 0,
+    "TotalTickets": 0,
+    "TotalCommonTickets": 0
+  },
+  "Security": {
+    "ThreeDigitCodeFilePath": null,
+    "SevenDigitCodeFilePath": null,
+    "SixDigitCodeFilePath": null
+  },
+  "PrizeTiers": [
+    {
+      "Id": 1,
+      "Value": 1000,
+      "DisplayText": "\u00A31000",
+      "TextCode": "ONETHOU",
+      "Barcode": "0700465541956",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 2,
+      "Value": 1000,
+      "DisplayText": "\u00A31000",
+      "TextCode": "ONETHOU",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 3,
+      "Value": 100,
+      "DisplayText": "\u00A3100",
+      "TextCode": "ONEHUN",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 4,
+      "Value": 100,
+      "DisplayText": "\u00A3100",
+      "TextCode": "ONEHUN",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 5,
+      "Value": 75,
+      "DisplayText": "\u00A375",
+      "TextCode": "SVTYFV",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 6,
+      "Value": 75,
+      "DisplayText": "\u00A375",
+      "TextCode": "SVTYFV",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 7,
+      "Value": 50,
+      "DisplayText": "\u00A350",
+      "TextCode": "FIFTY",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 8,
+      "Value": 50,
+      "DisplayText": "\u00A350",
+      "TextCode": "FIFTY",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 9,
+      "Value": 25,
+      "DisplayText": "\u00A325",
+      "TextCode": "TWNTYFV",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 10,
+      "Value": 25,
+      "DisplayText": "\u00A325",
+      "TextCode": "TWNTYFV",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 11,
+      "Value": 20,
+      "DisplayText": "\u00A320",
+      "TextCode": "TWNTY",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 12,
+      "Value": 20,
+      "DisplayText": "\u00A320",
+      "TextCode": "TWNTY",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 13,
+      "Value": 10,
+      "DisplayText": "\u00A310",
+      "TextCode": "TEN",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 14,
+      "Value": 10,
+      "DisplayText": "\u00A310",
+      "TextCode": "TEN",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 15,
+      "Value": 5,
+      "DisplayText": "\u00A35",
+      "TextCode": "FIVE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 16,
+      "Value": 5,
+      "DisplayText": "\u00A35",
+      "TextCode": "FIVE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 17,
+      "Value": 4,
+      "DisplayText": "\u00A34",
+      "TextCode": "FOUR",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 18,
+      "Value": 4,
+      "DisplayText": "\u00A34",
+      "TextCode": "FOUR",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 19,
+      "Value": 3,
+      "DisplayText": "\u00A33",
+      "TextCode": "THREE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 20,
+      "Value": 3,
+      "DisplayText": "\u00A33",
+      "TextCode": "THREE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 21,
+      "Value": 2,
+      "DisplayText": "\u00A32",
+      "TextCode": "TWO",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 22,
+      "Value": 2,
+      "DisplayText": "\u00A32",
+      "TextCode": "TWO",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 23,
+      "Value": 1,
+      "DisplayText": "\u00A31",
+      "TextCode": "ONE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 24,
+      "Value": 1,
+      "DisplayText": "\u00A31",
+      "TextCode": "ONE",
+      "Barcode": "",
+      "LvwWinnerCount": 0,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": true,
+      "IsOnlineDrawOnly": false
+    },
+    {
+      "Id": 0,
+      "Value": 0,
+      "DisplayText": "NO WIN",
+      "TextCode": "NOWIN",
+      "Barcode": "5000000000001",
+      "LvwWinnerCount": 60,
+      "HvwWinnerCount": 0,
+      "IsOnlinePrize": false,
+      "IsOnlineDrawOnly": false
+    }
+  ],
+  "AvailableSymbols": [
+    {
+      "Id": 1,
+      "Name": "STAR",
+      "DisplayText": "STAR",
+      "ImagePath": null
+    },
+    {
+      "Id": 2,
+      "Name": "SAFE",
+      "DisplayText": "SAFE",
+      "ImagePath": null
+    },
+    {
+      "Id": 3,
+      "Name": "DIAMND",
+      "DisplayText": "DIAMND",
+      "ImagePath": null
+    },
+    {
+      "Id": 4,
+      "Name": "CROWN",
+      "DisplayText": "CROWN",
+      "ImagePath": null
+    },
+    {
+      "Id": 5,
+      "Name": "STACK",
+      "DisplayText": "STACK",
+      "ImagePath": null
+    },
+    {
+      "Id": 6,
+      "Name": "PIGGY",
+      "DisplayText": "PIGGY",
+      "ImagePath": null
+    },
+    {
+      "Id": 7,
+      "Name": "WAD",
+      "DisplayText": "WAD",
+      "ImagePath": null
+    },
+    {
+      "Id": 8,
+      "Name": "GOLD",
+      "DisplayText": "GOLD",
+      "ImagePath": null
+    },
+    {
+      "Id": 9,
+      "Name": "WALLET",
+      "DisplayText": "WALLET",
+      "ImagePath": null
+    },
+    {
+      "Id": 10,
+      "Name": "CHMPG",
+      "DisplayText": "CHMPG",
+      "ImagePath": null
+    },
+    {
+      "Id": 11,
+      "Name": "CASH",
+      "DisplayText": "CASH",
+      "ImagePath": null
+    },
+    {
+      "Id": 12,
+      "Name": "CAR",
+      "DisplayText": "CAR",
+      "ImagePath": null
+    },
+    {
+      "Id": 13,
+      "Name": "RING",
+      "DisplayText": "RING",
+      "ImagePath": null
+    }
+  ],
+  "NumericSymbols": [
+    {
+      "Id": 2,
+      "Name": "TWO",
+      "DisplayText": "TWO",
+      "ImagePath": null
+    },
+    {
+      "Id": 3,
+      "Name": "THREE",
+      "DisplayText": "THREE",
+      "ImagePath": null
+    },
+    {
+      "Id": 4,
+      "Name": "FOUR",
+      "DisplayText": "FOUR",
+      "ImagePath": null
+    },
+    {
+      "Id": 5,
+      "Name": "FIVE",
+      "DisplayText": "FIVE",
+      "ImagePath": null
+    },
+    {
+      "Id": 6,
+      "Name": "SIX",
+      "DisplayText": "SIX",
+      "ImagePath": null
+    },
+    {
+      "Id": 7,
+      "Name": "SEVEN",
+      "DisplayText": "SEVEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 8,
+      "Name": "EIGHT",
+      "DisplayText": "EIGHT",
+      "ImagePath": null
+    },
+    {
+      "Id": 9,
+      "Name": "NINE",
+      "DisplayText": "NINE",
+      "ImagePath": null
+    },
+    {
+      "Id": 10,
+      "Name": "TEN",
+      "DisplayText": "TEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 11,
+      "Name": "ELEVEN",
+      "DisplayText": "ELEVEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 12,
+      "Name": "TWELVE",
+      "DisplayText": "TWELVE",
+      "ImagePath": null
+    },
+    {
+      "Id": 14,
+      "Name": "FOURTEEN",
+      "DisplayText": "FOURTEEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 15,
+      "Name": "FIFTEEN",
+      "DisplayText": "FIFTEEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 16,
+      "Name": "SIXTEEN",
+      "DisplayText": "SIXTEEN",
+      "ImagePath": null
+    },
+    {
+      "Id": 17,
+      "Name": "SEVENTEEN",
+      "DisplayText": "SEVENTEEN",
+      "ImagePath": null
+    }
+  ],
+  "Layout": {
+    "GameModules": []
+  }
+}
